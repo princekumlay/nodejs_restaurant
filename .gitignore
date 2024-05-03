@@ -1,0 +1,5 @@
+# it will ignore all the files and folders inside the node_module folder
+node_modules/
+
+# it will ignore the content of .env file
+.env
