@@ -4,7 +4,7 @@
   "description": "This is a node js tutorial by hello world on youtube",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "author": "kailash",
   "license": "ISC",
