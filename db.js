@@ -14,7 +14,10 @@ require('dotenv').config();
 const mongoURL = process.env.URLONLINE
 
 //here we have called mongodb.connect for connecting to the database using the URL and also defined some values. It will initialize the connection to the database but not actually connect to the database
-mongoose.connect(mongoURL);
+mongoose.connect(mongoURL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+});
 
 //here we call mongoose dafault object maintained by mongoose for the connection to the database and store it in the db variable
 
