@@ -21,14 +21,16 @@ mongoose.connect(mongoURL);
 const db = mongoose.connection;
 
 //there are also some events for the database that are predefined
-db.on('connected', () => {
-    console.log("Successfully connected to the database");
-});
-db.on('error', (err) => {
-    console.error("connection error:", err);
-});
-db.on('disconnected', () => {
-    console.log("database disconnected");
-});
+db.once('open', () => {
+    console.log('Successfully connected to the database');
+  });
+  
+  db.once('error', (err) => {
+    console.error('Connection error:', err);
+  });
+  
+  db.once('disconnected', () => {
+    console.log('Database disconnected');
+  });
 
 module.exports = db;
